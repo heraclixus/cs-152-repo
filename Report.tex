@@ -76,22 +76,143 @@ The 16-bit ALU consists consists of operations specified in figure 5. The most c
 
 \subsection{Simulation Result}
 
-The simulation result is in figure 9.
+There are 12 operations, so we have in total 12 simulation results, each for one operation.\\
+\\
+\textbf{1. Subtraction}\\
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=\linewidth]{lab1-2.PNG}
-  \caption{16-bit ALU demo}
-  \label{fig:16-ALU demo}
+  \includegraphics[width=\linewidth]{0000.PNG}
+  \caption{subtraction case}
+  \label{fig:sub}
+\end{figure}
+Subtraction's simulation result is shown in the figure 9: the first test case and the fourth test cases do not have overflow, whereas the second and the third test cases, subtracting the largest positive number from the smallest negative number and subtracting the smallest negative number from the largest positive number, all trigger overflow, and the overflow bit is set to high in our simulation. 
+\\
+\\
+\textbf{2. Addition}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{0001.PNG}
+  \caption{addition case}
+  \label{fig:add}
 \end{figure}
 
+Addition's simulation result is shown in the figure 10: the first test case and the fourth test case do not have overflow, whereas the second and the third test cases, adding the largest positive number with itself and adding the smallest negative number with itself, all trigger overflow, and the overflow bit is set to high in our simulation. 
+\\
+\textbf{3. Bitwise OR}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{0010.PNG}
+  \caption{bitwise OR case}
+  \label{fig:or}
+\end{figure}
+The bitwise OR's result is in figure 11. In this case, no overflow occurs. \\
+
+\textbf{4. Bitwise AND}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{0011.PNG}
+  \caption{bitwise AND case}
+  \label{fig:AND}
+\end{figure}
+The bitwise AND's result is in figure 12. In this case, no overflow occurs.\\
+
+\textbf{5. Decrement}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{0100.PNG}
+  \caption{Decrement case}
+  \label{fig:Decrement}
+\end{figure}
+The Decrement result is in figure 13. The first and the last cases do not overflow, but the second case, which increments the largest positive number, triggers an overflow and was captured in the simulation. \\
+
+\textbf{6. Increment}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{0101.PNG}
+  \caption{Increment case}
+  \label{fig:Increment}
+\end{figure}
+The increment case result is in figure 14. The first and the last cases do not overflow, but the second case, which decrements the smallest negative number, triggers an overflow and was captured in the simulation. \\
+
+\textbf{7. Invert}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{0110.PNG}
+  \caption{Invert case}
+  \label{fig:invert}
+\end{figure}
+The invert case result is in figure 15. The first and the second case do not overflow, but the last case, which inverts the number 16'b1000000000000000, results in an overflow, since the inversion gives the same result back.\\
+
+\textbf{8. Arithmetic Shift Left}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{1100.PNG}
+  \caption{Arithmetic Shift Left}
+  \label{fig:arith left}
+\end{figure}
+The result for arithmetic shift left is in figure 16. The first case triggers an overflow. This is because we have an positive number, and left shift should makes another positive number, but a negative number is obtained. \\
+
+\textbf{9. Arithmetic Shift Right}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{1110.PNG}
+  \caption{Arithmetic Shift Right}
+  \label{fig:arith right}
+\end{figure}
+The result for arithmetic shift right is in figure 17. No overflow occurs for this case. \\
+
+\textbf{10. Logical Shift Left}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{1000.PNG}
+  \caption{Logical Shift Left}
+  \label{fig:log left}
+\end{figure}
+The result for logical shift left is in figure 18. Since it is a logical shift, there is no overflow. \\
+
+\textbf{11. Logical shift Right}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{1010.PNG}
+  \caption{Logical Shift Right}
+  \label{fig:log right}
+\end{figure}
+The result for logical shift right is in figure 19. Since it is a logical shift there is no overflow.\\
+
+\textbf{12. Set on Less than or Equal}\\
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{1001.PNG}
+  \caption{slt case}
+  \label{fig:slt}
+\end{figure}
+
+The result for the set less than or equal case is in figure 20. Even though the subtraction logic might trigger overflow, it should not and is not captured here. 
 
 
-\subsection{Discussion}
-The difficulties encountered for the 16-bit ALU design are: 
-1. The overflow handling: the logic is that when two positive numbers add, and the result's sign bit is 1, have an overflow. This generic case is complicated by: in the subtraction case, when a positive number subtract a negative number, but result is negative, or a negative number minus a positive number, but result is positive. When we implement the set less than operation, we also need to specify the logic: 
+\subsection{Overflow Detection}
+\textbf{Subtraction}: A - B has overflow in two cases: A is positive, B is negative and the result is negative; and A is negative, B is positive and the result is positive. So overflow happens when A and B have different sign and result is the opposite sign as A. We implemented this logic by: 
 \begin{verbatim}
-logic here
+assign o0 = (A[15] ^ B[15]) & (A[15] ^ r0[15]);
 \end{verbatim}
+\vspace{5mm}
+\textbf{Addition}: A + B has overflow in two cases: A is positive, B is positive, and the result is negative; and A is negative, B is negative, and the result is positive. So overflow happens when A and b have the same sign and the result is the opposite sign. We implemented this logic by:
+\begin{verbatim}
+assign o1 = (A[15] ~^ B[15]) & (A[15] ^ r1[15]);
+\end{verbatim}
+\vspace{5mm}
+\textbf{Left Shift}: 
+Both arithmetic and logic left shift can trigger overflow: when before and after the operation, the sign of the operand changes, we detect an overflow. We implemented this with the logic: 
+\begin{verbatim}
+assign o12 = A[15] ^ r12[15];
+assign o14 = A[15] ^ r14[15];
+\end{verbatim}
+\vspace{5mm}
+\textbf{Set Less Than}: 
+
+
+
+
 
 
 \section{Part 3: Register File }
