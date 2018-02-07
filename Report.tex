@@ -208,23 +208,79 @@ assign o12 = A[15] ^ r12[15];
 assign o14 = A[15] ^ r14[15];
 \end{verbatim}
 \vspace{5mm}
-\textbf{Set Less Than}: 
-
-
-
+\textbf{Set Less Than}: The set less than 
 
 
 
 \section{Part 3: Register File }
 \subsection{Introduction}
-
+The register file is built from 32 16-bit registers, two read ports, and a single write port. The register file should be able to support two concurrent read operations and one write operation. In addition, the register file has a clock and a reset pin. When reset is triggered, all of the registers are set to zeros. The implementation is carried out using behavior verilog. 
 \subsection{Simulation Result}
-
-\subsection{Discussion}
 
 
 
 \section{Part 4: Questions and Answers}
+Q1: What is the difference between structural and behavior verilog? Please provice an exmaple of a structural and behavior implementation of a multiplexer. \\
+A: Behavior verilog refers to verilog design that simulates the behavior of digital circuits using higher order logic and modules, such as using always and assign. Structural verilog refers to verilog design that builds the components from scratch by using logical gates and lower level blocks.  \\
+Behavior verilog: 
+\begin{verbatim}
+module  mux_behavior(din_0, din_1, sel, mux_out); 
+input din_0, din_1, sel;
+output mux_out;
+wire mux_out;
+assign mux_out = (sel)? din_1 : din_0;
+endmodule
+\end{verbatim}
+Structural Verilog:
+\begin{verbatim}
+module mux(f, a, b, sel);
+output f;
+input a, b, sel;
+
+and g1(f1, a, nsel);
+	g2(f2, b, sel); 
+or  g3(f, f1, f2);
+not g4(nsel, sel); 
+endmodule 
+\end{verbatim}
+
+Q2: What is the difference between an asynchronous and synchronous multiplexer? Please provide a brief explanation on how you could implement both using behavior verilog. \\
+\vspace{5mm}
+
+Q3: What is the difference between an arithmetic and logical shifter?\\
+A: Arithmetic shift preserves the sign bit and functions logically equivalent as binary arithmetic; logical shift simply shift out digits and pad with zeros.\\
+
+Q4: Assuming that you did not use Behavior verilog to implement an arithmetic shifter, how could you design one from scratch? Please include a simple diagram.\\
+The diagram is simply the following: 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{arithmetic_shift.png}
+  \caption{arithemtic}
+  \label{fig:arithemtic shift}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
