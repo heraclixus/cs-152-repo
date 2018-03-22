@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 MAR 2018 12:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 MAR 2018 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Report.tex
-(./Report.tex
+**proj3.tex
+(./proj3.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
@@ -464,15 +464,8 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen120
 \Gin@req@width=\dimen121
 )
-(./Report.aux
-
-LaTeX Warning: Label `fig:1-ALU' multiply defined.
-
-
-LaTeX Warning: Label `fig:mux4-1' multiply defined.
-
-)
-\openout1 = `Report.aux'.
+(./proj3.aux)
+\openout1 = `proj3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
@@ -580,241 +573,39 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<1-Bit-ALU.png, id=1, 584.1825pt x 430.60875pt>
-File: 1-Bit-ALU.png Graphic file (type png)
- <use 1-Bit-ALU.png>
-Package pdftex.def Info: 1-Bit-ALU.png used on input line 24.
-(pdftex.def)             Requested size: 469.75502pt x 346.27464pt.
-
-<mux2-1.png, id=2, 566.115pt x 254.9525pt>
-File: mux2-1.png Graphic file (type png)
- <use mux2-1.png>
-Package pdftex.def Info: mux2-1.png used on input line 32.
-(pdftex.def)             Requested size: 234.8775pt x 105.77608pt.
-
-<mux4-1.png, id=3, 255.95625pt x 197.73875pt>
-File: mux4-1.png Graphic file (type png)
- <use mux4-1.png>
-Package pdftex.def Info: mux4-1.png used on input line 36.
-(pdftex.def)             Requested size: 234.8775pt x 181.45418pt.
-
-<lab1-1.PNG, id=4, 675.27281pt x 164.11313pt>
-File: lab1-1.PNG Graphic file (type png)
- <use lab1-1.PNG>
-Package pdftex.def Info: lab1-1.PNG used on input line 45.
-(pdftex.def)             Requested size: 469.75502pt x 114.1672pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[1
-
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./1-Bit
--ALU.png>] <16-alu.png, id=16, 864.22874pt x 355.3275pt>
-File: 16-alu.png Graphic file (type png)
- <use 16-alu.png>
-Package pdftex.def Info: 16-alu.png used on input line 57.
-(pdftex.def)             Requested size: 469.75502pt x 193.13727pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: mux4-1.png Graphic file (type png)
-<use mux4-1.png>
-Package pdftex.def Info: mux4-1.png used on input line 65.
-(pdftex.def)             Requested size: 155.02pt x 119.76054pt.
- <mux16-1.png, id=17, 527.9725pt x 525.965pt>
-File: mux16-1.png Graphic file (type png)
-
-<use mux16-1.png>
-Package pdftex.def Info: mux16-1.png used on input line 69.
-(pdftex.def)             Requested size: 155.02pt x 154.428pt.
- <4-adder.png, id=18, 501.875pt x 200.75pt>
-File: 4-adder.png Graphic file (type png)
- <use 4-adder.png>
-Package pdftex.def Info: 4-adder.png used on input line 73.
-(pdftex.def)             Requested size: 155.02pt x 62.00824pt.
-
-<0000.PNG, id=19, 914.66719pt x 155.83218pt>
-File: 0000.PNG Graphic file (type png)
- <use 0000.PNG>
-Package pdftex.def Info: 0000.PNG used on input line 86.
-(pdftex.def)             Requested size: 469.75502pt x 80.03214pt.
-
-<0001.PNG, id=20, 909.3975pt x 151.3153pt>
-File: 0001.PNG Graphic file (type png)
- <use 0001.PNG>
-Package pdftex.def Info: 0001.PNG used on input line 96.
-(pdftex.def)             Requested size: 469.75502pt x 78.1626pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--100
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--100
-
- []
-
-[2 <./mux2-1.png> <./mux4-1.png> <./lab1-1.PNG>]
-<0010.PNG, id=27, 749.80125pt x 152.82094pt>
-File: 0010.PNG Graphic file (type png)
- <use 0010.PNG>
-Package pdftex.def Info: 0010.PNG used on input line 106.
-(pdftex.def)             Requested size: 469.75502pt x 95.74368pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--111
-
- []
-
-[3 <./16-alu.png> <./mux16-1.png> <./4-adder.png> <./0000.PNG>]
-<0011.PNG, id=33, 601.4972pt x 155.83218pt>
-File: 0011.PNG Graphic file (type png)
- <use 0011.PNG>
-Package pdftex.def Info: 0011.PNG used on input line 115.
-(pdftex.def)             Requested size: 469.75502pt x 121.70554pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--120
-
- []
-
-<0100.PNG, id=34, 747.54282pt x 145.29282pt>
-File: 0100.PNG Graphic file (type png)
- <use 0100.PNG>
-Package pdftex.def Info: 0100.PNG used on input line 124.
-(pdftex.def)             Requested size: 469.75502pt x 91.30215pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--129
-
- []
-
-[4 <./0001.PNG> <./0010.PNG> <./0011.PNG> <./0100.PNG>]
-<0101.PNG, id=42, 750.55406pt x 150.5625pt>
-File: 0101.PNG Graphic file (type png)
- <use 0101.PNG>
-Package pdftex.def Info: 0101.PNG used on input line 133.
-(pdftex.def)             Requested size: 469.75502pt x 94.23456pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--138
-
- []
-
-<0110.PNG, id=43, 750.55406pt x 158.09062pt>
-File: 0110.PNG Graphic file (type png)
- <use 0110.PNG>
-Package pdftex.def Info: 0110.PNG used on input line 142.
-(pdftex.def)             Requested size: 469.75502pt x 98.94629pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--147
-
- []
-
-<1100.PNG, id=44, 755.82375pt x 152.06813pt>
-File: 1100.PNG Graphic file (type png)
- <use 1100.PNG>
-Package pdftex.def Info: 1100.PNG used on input line 151.
-(pdftex.def)             Requested size: 469.75502pt x 94.51329pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--156
-
- []
-
-<1110.PNG, id=45, 751.30687pt x 151.3153pt>
-File: 1110.PNG Graphic file (type png)
- <use 1110.PNG>
-Package pdftex.def Info: 1110.PNG used on input line 160.
-(pdftex.def)             Requested size: 469.75502pt x 94.61107pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 157--165
-
- []
-
-<1000.PNG, id=46, 758.835pt x 151.3153pt>
-File: 1000.PNG Graphic file (type png)
- <use 1000.PNG>
-Package pdftex.def Info: 1000.PNG used on input line 169.
-(pdftex.def)             Requested size: 469.75502pt x 93.67366pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--174
-
- []
-
-[5 <./0101.PNG> <./0110.PNG> <./1100.PNG>]
-<1010.PNG, id=53, 600.74437pt x 142.28156pt>
-File: 1010.PNG Graphic file (type png)
- <use 1010.PNG>
-Package pdftex.def Info: 1010.PNG used on input line 178.
-(pdftex.def)             Requested size: 469.75502pt x 111.2614pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--183
-
- []
-
-<1001.PNG, id=54, 768.62157pt x 158.84344pt>
-File: 1001.PNG Graphic file (type png)
- <use 1001.PNG>
-Package pdftex.def Info: 1001.PNG used on input line 187.
-(pdftex.def)             Requested size: 469.75502pt x 97.08098pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 197.
-
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 26.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [6 <./1110.PNG> <./1000.PNG> <./1010.PNG>] [7 <./1001.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 258--260
+) [1
 
- []
-
-<arithmetic_shift.png, id=67, 711.8595pt x 367.97475pt>
-File: arithmetic_shift.png Graphic file (type png)
-
-<use arithmetic_shift.png>
-Package pdftex.def Info: arithmetic_shift.png used on input line 265.
-(pdftex.def)             Requested size: 469.75502pt x 242.83038pt.
- <reg.png, id=68, 729.72626pt x 303.1325pt>
-File: reg.png Graphic file (type png)
-
-<use reg.png>
-Package pdftex.def Info: reg.png used on input line 290.
-(pdftex.def)             Requested size: 469.75502pt x 195.13736pt.
- [8 <./arithmetic_shift.png>]
-<lab1-3.PNG, id=73, 718.18312pt x 210.7875pt>
-File: lab1-3.PNG Graphic file (type png)
- <use lab1-3.PNG>
-Package pdftex.def Info: lab1-3.PNG used on input line 300.
-(pdftex.def)             Requested size: 469.75502pt x 137.87544pt.
- [9 <./reg.png> <./lab1-3.PNG>] [10] <shifter.png, id=82, 683.55376pt x 366.368
-74pt>
-File: shifter.png Graphic file (type png)
-
-<use shifter.png>
-Package pdftex.def Info: shifter.png used on input line 369.
-(pdftex.def)             Requested size: 469.75502pt x 251.78285pt.
- [11 <./shifter.png>] (./Report.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<schematics.png, id=15, 671.50874pt x 451.6875pt>
+File: schematics.png Graphic file (type png)
+ <use schematics.png>
+Package pdftex.def Info: schematics.png used on input line 116.
+(pdftex.def)             Requested size: 469.75502pt x 315.97922pt.
+ [3 <./schematics.png>] [4] [5] [6] (./proj3.aux) ) 
 Here is how much of TeX's memory you used:
- 3258 strings out of 492995
- 42146 string characters out of 6132704
- 111444 words of memory out of 5000000
- 6739 multiletter control sequences out of 15000+600000
- 13207 words of font info for 36 fonts, out of 8000000 for 9000
+ 3122 strings out of 492995
+ 40380 string characters out of 6132704
+ 112221 words of memory out of 5000000
+ 6627 multiletter control sequences out of 15000+600000
+ 11977 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,32p,562b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Report.pdf (11 pages, 782198 bytes).
+ 39i,6n,32p,441b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/tex
+mf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/cm-super/sftt1000.pfb>
+Output written on proj3.pdf (6 pages, 196911 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

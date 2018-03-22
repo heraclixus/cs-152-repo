@@ -210,14 +210,12 @@ assign o12 = A[15] ^ r12[15];
 assign o14 = A[15] ^ r14[15];
 \end{verbatim}
 \vspace{5mm}
-<<<<<<< HEAD
 \textbf{Set Less Than}: 
 Since the set less than only cares about one bit (either 0 or 1), the code is as follows: 
 \begin{verbatim}
 assign r9[15:1] = 15'b000000000000000;
 	assign r9[0] = (~o9 & ((~r0[15]) | subtract_zero)) | (o9 & (~A[15])); //consider overflow
 \end{verbatim}
-=======
 \textbf{Set Less Than}: The set less than 
 
 
